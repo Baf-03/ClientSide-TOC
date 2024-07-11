@@ -4,9 +4,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Signup";
 import AuthRoute from "./routes/authRoutes";
 import ProtectedRoute from "./routes/protectedRoutes";
-import Todo from "./pages/Todo";
+
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import LockBox from "./pages/Lockbox";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/auth/login" element={<Login />} />
         </Route>
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Todo/>} />
+          <Route path="/" element={<LockBox/>} />
         </Route>
 
       </Routes>

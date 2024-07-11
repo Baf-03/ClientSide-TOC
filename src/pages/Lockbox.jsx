@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Bounce, toast } from "react-toastify";
 import OrbitingText from "../components/OrbitingText";
 
-function Todo() {
+function LockBox() {
   const navigate = useNavigate()
   const {email}= useSelector((state)=>state.userReducer)
   console.log(email)
@@ -166,12 +166,13 @@ function Todo() {
     }
   };
 
+
   //-----------------------------------ui -------------------------------------------------------------------
   return (
     <>
       {/* ---------------------------------Header------------------------------ */}
       <div className="flex text-white justify-center background-color py-5 items-center font-bold">
-        <h2 className="w-[90%] text-center">Encryptodo</h2>
+        <h2 className="w-[90%] text-center">LockBox</h2>
         <div onClick={()=>{localStorage.removeItem('token');navigate("/auth/login")}}><img className="w-[20px] hover:cursor-pointer" src="https://icons.veryicon.com/png/o/internet--web/website-icons/logout-8.png" alt="" /></div>
       </div>
 
@@ -180,7 +181,7 @@ function Todo() {
         <div className="w-[90%] md:w-[60%] lg:w-[40%] mt-5">
           <TextField
             id="filled-basic"
-            label="Enter Todo"
+            label="Type Here"
             variant="filled"
             className="w-[100%] "
             value={todo_main_input}
@@ -278,13 +279,13 @@ function Todo() {
                   }}
                   colors="error"
                 />
-                <Buttons
+                {/* <Buttons
                   value="Complete"
                   trigger={() => {
                     Completed_todo(element._id,index);
                   }}
                   colors="secondary"
-                />
+                /> */}
               </div>
             </section>
           )
@@ -297,9 +298,10 @@ function Todo() {
         
    
       </section>
+      <div className="absolute w-full bottom-2 text-gray-600 text-center font-bold">Welcome To LockBox Where Everything is End to End Encrypted</div>
     </>
       
   );
 }
 
-export default Todo;
+export default LockBox;

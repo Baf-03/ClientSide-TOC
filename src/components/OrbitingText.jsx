@@ -25,7 +25,7 @@ const OrbitingText = ({color}) => {
             <use xlinkHref="#circlePath" fill="none" />
             <text fill={color} >
               <textPath xlinkHref="#circlePath">
-              TOC * SIR MUZAMMIL PROJECT * REGEX * BAF *
+              TOC * SIR MUZAMMIL PROJECT * REGEX * AAB *
               </textPath>
             </text>
           </g>
