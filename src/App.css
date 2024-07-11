@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .transition-all {
+    transition: all 0.3s ease-in-out;
+  }
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+}
+
+.bluebg{
+  /* background: linear-gradient(229deg,var(--token-39ed30df-f08c-4c2a-b881-aa50b3d6b65f, #3792ed) 0%,var(--token-ce00d43c-2540-49b7-a925-1055ee2cdc7d, rgb(0, 17, 207)) 53.60360360360361%); */
+  background-image: url("https://chaajao.com/wp-content/uploads/2024/05/KU-UBIT-final.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+/*   
+background: rgb(49,40,214);
+background: linear-gradient(90deg, rgba(49,40,214,1) 43%, rgba(105,105,226,1) 100%, rgba(0,255,102,1) 100%); */
+}
+.background-color {
+    background-color: rgba(128, 0, 0, 1);
+  }
+.bluebg{
+    /* background: linear-gradient(229deg,var(--token-39ed30df-f08c-4c2a-b881-aa50b3d6b65f, #3792ed) 0%,var(--token-ce00d43c-2540-49b7-a925-1055ee2cdc7d, rgb(0, 17, 207)) 53.60360360360361%); */
+    background-image: url("https://chaajao.com/wp-content/uploads/2024/05/KU-UBIT-final.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  /*   
+  background: rgb(49,40,214);
+  background: linear-gradient(90deg, rgba(49,40,214,1) 43%, rgba(105,105,226,1) 100%, rgba(0,255,102,1) 100%); */
+  }
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
