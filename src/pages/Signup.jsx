@@ -64,7 +64,8 @@ const Register = () => {
   };
 
   const handleEmailChange = (e) => {
-    const email = e.target.value;
+    //...prev for
+    const email = e.target.value;//input field mae sae likha gaya text nikalnae ka kaam krta hae yae
     setFormData((prev) => ({
       ...prev,
       email,
@@ -133,12 +134,14 @@ const Register = () => {
     console.log("Form submitted");
 
     // DFA states
+    
     const states = ["name", "email", "password", "cnic", "final"];
     let currentState = "name";
-
+ 
     // Transition functions
+   
     const transitions = {
-      name: () => {
+      name: () => { 
         if (!formData.name.trim()) {
           setErrors((prev) => ({
             ...prev,
@@ -154,6 +157,7 @@ const Register = () => {
         return true;
       },
       email: () => {
+        
         if (!validateEmail(formData.email)) {
           setErrors((prev) => ({
             ...prev,
@@ -263,7 +267,7 @@ const Register = () => {
             style={{ lineHeight: "1.4" }}
           >
             Welcome to Encrypted
-            <br />Data Storage
+            <br />Lockbox
           </h2>
           <p
             className="lg:w-[80%] xl:w-[45%] lg:mt-5 lg:text-[1rem] xl:text-[1rem] font-bold"
